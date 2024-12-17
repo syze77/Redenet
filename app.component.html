@@ -1,0 +1,9 @@
+<h1>Lista de Espera</h1>
+<div *ngIf="messages.length === 0">
+  <p>Não há mensagens no momento.</p>
+</div>
+<ul *ngIf="messages.length > 0">
+  <li *ngFor="let msg of messages">
+    <strong>{{ msg.sender }}</strong>: {{ msg.body }}
+  </li>
+</ul>
